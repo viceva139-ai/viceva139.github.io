@@ -2,9 +2,7 @@
 <html>
   <head>
     <style>
-    body {
-      background-color: black; }
-      
+    
       .container
         max-width: 600px;
     margin:auto;
@@ -12,9 +10,9 @@
       }
 
       .puzzle-box {
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
+        display:flex;
+        flex-wrap: wrap;
+        width: 300px;
       }
 
       .puzzle-box img{
@@ -22,7 +20,7 @@
         display:block;
       }
       
-      .faulty piece{ 
+      .faulty-piece{ 
         display: none;
       }
     </style>
