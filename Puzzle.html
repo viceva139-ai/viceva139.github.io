@@ -4,15 +4,16 @@
     <style>
       .container{
         display: grid;
-        grid-template-columns: 1fr: 
-        grid-template-rows: auto auto auto; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto); 
         justify-item: center; 
       }
 
       .puzzle-box{
         display: flex;
-        flex-wrap:wrap;
-        width: 900px; 
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(5, 100px);
+        gap:0;
       }
       
       .faulty-piece{ 
