@@ -2,32 +2,34 @@
 <html>
   <head>
     <style>
-      .container{
-        display: flex;
-        flex-wrap: wrap;
-        width: 600px;
-        margin: 0 auto;
+    body {
+      background-color: black; }
+      
+      .container
+        max-width: 600px;
+    margin:auto;
+    bacground-color:white
       }
 
-      .mobile-row {
+      .puzzle-box {
         display:grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         width: 100%;
       }
 
-      .mobile-row img{
+      .puzzle-box img{
         width: 100%;
-        height: auto;
+        display:block;
       }
       
-      .mobile-row img{ 
+      .faulty piece{ 
         display: none;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <header>Name: Eva | Puzzle:snowman</header> 
+      <header>Name: Eva | Puzzle: snowman</header> 
       <div class="puzzle-box">
         <img src="images/puzzle2_A.jpg">
         <img src="images/puzzle2_B.jpg">
