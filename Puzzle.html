@@ -3,17 +3,21 @@
   <head>
     <style>
       .container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, auto); 
-        justify-item: center; 
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        margin: 0 auto;
       }
 
-      .puzzle-box{
-        display: flex;
-        grid-template-columns: repeat(3, 100px);
-        grid-template-rows: repeat(5, 100px);
-        gap:0;
+      .mobile-row {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+      }
+
+      .mobile-row img{
+        width: 100%;
+        height: auto;
       }
       
       .faulty-piece{ 
