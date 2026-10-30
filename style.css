@@ -1,5 +1,18 @@
-table {width:80%; margin:20px auto; border-collapse: collapse; font-family: sans-erif; }
-th, td {border:1px solid #333; padding:12px; text-align: center;}
-th { background-color: #333; color: white;}
-/* Pseudo-class: stripes every even row*/ 
-tr:nth-child(even) {background-color: #e0e0e0;} 
+table {
+  width:80%; 
+  margin:20px auto;
+  border-collapse: collapse;
+  font-family: sans-erif; 
+}
+th, td {
+  border:1pxsolid #333; 
+  padding:10px; 
+  text-align: center;
+}
+th { 
+  background-color: #f2f2f2;
+}
+
+tr:hover{
+  background-color:#ddd;
+}
