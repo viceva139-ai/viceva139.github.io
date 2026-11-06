@@ -16,3 +16,18 @@ th {
 tr:hover{
   background-color:#ddd;
 }
+
+body{
+  font-famly: Arial, sans-serif;
+  margin:50px;
+}
+
+img{
+  border :2px solid #555;
+  width:400px;
+}
+
+iframe{
+  border:3px solid #000;
+  margin-top: 20px;
+}
