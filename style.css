@@ -34,6 +34,7 @@ iframe{
 { margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
 body{
   font-family: Arial, sans-serif;
   background: #e9edf0;
@@ -83,9 +84,8 @@ header h1{
   width: 100%;
   height: 220px;
   position: relative;
-  overflow: #555;
-  border: 5px solid #ddd;
-  box-shadow: inset 0 0 15px #222; }
+  overflow: hidden;
+  border: 5px solid #ddd; }
 .footbal-image{
   width: 100%;
   height: 100%;
@@ -96,7 +96,7 @@ header h1{
   positon:abolute;
   top: 0;
   left: 0;
-  widht: 100%;
+  width: 100%;
   height: 100%;
   object-fit: fill;
   opacity: 0.95; }
