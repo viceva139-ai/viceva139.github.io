@@ -93,7 +93,7 @@ header h1{
   filter: brightness(0.65)
   saturate(0.8); }
 .tic-tac-toe{
-  positon:abolute;
+  positon: abolute;
   top: 0;
   left: 0;
   width: 100%;
