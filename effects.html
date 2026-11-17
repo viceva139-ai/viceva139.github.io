@@ -10,14 +10,17 @@
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         padding: 20px; }
-      .gallery-grid {
+      .gallery {
             display: grid;
-            grid-template-columns:repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             max-width: 1100px;
             margin: 0 auto; }
+      .project h2 {
+            font-size: 18px;
+            margin-bottom: 10px; }
 
-      .penguin-container {
+      .penguins-container {
             width: 300px;
             height: 200px;
             border-radius: 50%; 
@@ -28,9 +31,9 @@
             width: 100%;
             height: 100%;
             object-fit:cover;
-            filter: sepia(80%); }
+            filter: sepia(85%); }
 
-      .football-field {
+      .football-container {
             width: 280px;
             height: 160px;
             border: 25px solid transparent;
@@ -46,14 +49,14 @@
       .tic-tact-toe-image {
             display: none; }
 
-      .dino-container {
+      .dinosaur-container {
             width: 300px;
             height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #fff; }
-      .dino-container img {
+      .dinosaur-container img {
             max-width: 85%;
             max-height: 85%;
             filter: hue-rotate(150deg) drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.5)); }
@@ -80,7 +83,7 @@
       .butterfly-container img {
             width: 100%
             height: 100%
-            object-fit:cover;
+            object-fit: cover;
             filter: invert(100%); }
 
       .stage-container {
@@ -101,19 +104,34 @@
             object-fit: cover;
             z-index: 0; }
       
-      .curtain,
+      .curtain {
+            position: absolute;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            background: linear-gradient(to right, #600, #a00, #600);
+            z-index:1;
+      .left-curtain {
+            left: 0; }
+      .right-curtain {
+            right: 0; }
+
       .spotlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(cricle at center, rgba(255, 255, 220, 0.35) 0%, rgba(0, 0, 0, 0.6) 75%);
             z-index: 1; }
-      .stage-container h2,
-      .stage-container p,
-      .stage-text {
+      .stage-container p {
             position: relative;
             z-index: 2;
             color: #ffffff;
             font-size: 28px;
             font-weight: bold;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px #fff, 0 0 20px #ffdd88; }
+            text-shadow: 0 0 10px #fff, 0 0 20px #ffgg88; }
             
   </style>
     </head>
