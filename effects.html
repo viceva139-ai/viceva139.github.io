@@ -1,185 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title> Image Effects</title>
-        
-  body{
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        padding: 20px; }
-      .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto; }
-      .project h2 {
-            font-size: 18px;
-            margin-bottom: 10px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Effects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
 
-      .penguins-container {
-            width: 300px;
-            height: 200px;
-            border-radius: 50%; 
-            overflow: hidden;
-            border: 1px solid #888;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-      .penguin-container img{
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-            filter: sepia(100%); }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-      .football-container {
-            width: 320px;
-            height: 200px;
-            border: 30px solid transparent;
-            border-image: url("images/tic-tac-toe.png") 33% round;
-            box-sizing: border-box;
-            overflow: hidden; }
-      .football-image {
-            width: 100%
-            height: 100%
-            object-fit: fill;
-            filter: grayscale(100%); }
+    .project h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
-      .tic-tact-toe-image {
-            display: none; }
+    .penguins-container {
+      width: 300px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #888;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-      .dinosaur-container {
-            width: 300px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff; }
-      .dinosaur-container img {
-            max-width: 85%;
-            max-height: 85%;
-            filter: hue-rotate(110deg) drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.5)); }
+    .penguins-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      filter: sepia(100%);
+    }
 
-      .seagull-container {
-            width: 300px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to bottom right, #5b9bd5 0%, #c6ddf3 45%, #f5f7fa 85%, #e8ecf1 100%); 
-            Box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25; }
-      .seagull-container img {
-            width: 90%;
-            height: 90%;
-            object-fit: contain;
-            filter: drop-shadow(4px 6px 5px rgba(0,0,0,0.3)); }
+    .football-container {
+      width: 320px;
+      height: 200px;
+      border: 30px solid transparent;
+      border-image: url("images/tic-tac-toe.png") 33% round;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
 
-      .butterfly-container {
-            width: 330px;
-            height: 220px;
-            border-radius: 75px 0 75px 0;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.25); }
-      .butterfly-container img {
-            width: 90%
-            height: 90%
-            object-fit: fill;
-            filter: invert(90%) brightness(110%); }
+    .football-image {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      filter: grayscale(100%);
+    }
 
-      .stage-container {
-            position: relative;
-            width: 240px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; }
-      .stage-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-            z-index: 1; }
-      
-      .curtain {
-            display: none; }
+    .tic-tac-toe {
+      display: none;
+    }
 
-      .spotlight {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(cricle at center, rgba(255, 255, 220, 0.35) 0%, rgba(0, 0, 0, 0.6) 75%);
-            z-index: 1; }
-      .stage-container p {
-            position: relative;
-            z-index: 10;
-            margin: 0;
-            color: #ffffff;
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 6px #oooooo, 0 0 12px #ffffff; }
-            
+    .dinosaur-container {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .dinosaur-container img {
+      max-width: 85%;
+      max-height: 85%;
+      filter: hue-rotate(110deg) drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.5));
+    }
+
+    .seagull-container {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom right, #5b9bd5 0%, #c6ddf3 45%, #f5f7fa 85%, #e8ecf1 100%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .seagull-container img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .butterfly-container {
+      width: 330px;
+      height: 220px;
+      border-radius: 75px 0 75px 0;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .butterfly-container img {
+      width: 90%;
+      height: 90%;
+      object-fit: fill;
+      filter: invert(90%) brightness(110%);
+    }
+
+    .stage-container {
+      position: relative;
+      width: 240px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .stage-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      z-index: 1;
+    }
+
+    .curtain {
+      display: none;
+    }
+
+    .spotlight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 220, 0.35) 0%, rgba(0, 0, 0, 0.6) 75%);
+      z-index: 2;
+    }
+
+    .stage-container p {
+      position: relative;
+      z-index: 10;
+      margin: 0;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 6px #000000, 0 0 12px #ffffff;
+    }
   </style>
-    </head>
-      <body>
-      <header>
-        <h1>Image Effects</h1>
-      </header>
-      <main class="gallery">
-     
-        <section class="project">
-          <h2>1. Penguins</h2>
-          <div class="penguins-container">
-            <img src="images/penguins.jpg" alt="Penguins">
-          </div>
-        </section>
+</head>
+<body>
+  <header>
+    <h1>Image Effects</h1>
+  </header>
+  <main class="gallery">
+    <section class="project">
+      <h2>1. Penguins</h2>
+      <div class="penguins-container">
+        <img src="images/penguins.jpg" alt="Penguins">
+      </div>
+    </section>
 
-        <section class="project">
-          <h2>2. Football Field</h2>
-          <div class="football-container">
-            <img class="football-image"
-              src="images/football_field.jpg" alt="Football field">
-              <img class="tic-tac-toe"
-              src="images/tic-tac-toe.png" alt=" Tic Tac Toe overlay">
-          </div>
-        </section>
+    <section class="project">
+      <h2>2. Football Field</h2>
+      <div class="football-container">
+        <img class="football-image" src="images/football_field.jpg" alt="Football field">
+        <img class="tic-tac-toe" src="images/tic-tac-toe.png" alt="Tic Tac Toe overlay">
+      </div>
+    </section>
 
-        <section class="project">
-          <h2>3. Dinosaur</h2>
-          <div class="dinosaur-container">
-            <img src="images/dinosaur.png" alt="dinosaur">
-          </div>
-        </section>
+    <section class="project">
+      <h2>3. Dinosaur</h2>
+      <div class="dinosaur-container">
+        <img src="images/dinosaur.png" alt="Dinosaur">
+      </div>
+    </section>
 
-        <section class="project">
-          <h2>4. Seagull</h2>
-          <div class="seagull-container">
-            <img src="images/seagull.png" alt="Flying seagull">
-          </div>
-        </section>
+    <section class="project">
+      <h2>4. Seagull</h2>
+      <div class="seagull-container">
+        <img src="images/seagull.png" alt="Flying seagull">
+      </div>
+    </section>
 
-        <section class="project">
-          <h2>5. Butterfly</h2>
-          <div class="butterfly-container">
-            <img src="images/butterfly.jpg" alt="butterfly">
-          </div>
-        </section>
+    <section class="project">
+      <h2>5. Butterfly</h2>
+      <div class="butterfly-container">
+        <img src="images/butterfly.jpg" alt="Butterfly">
+      </div>
+    </section>
 
-        <section class="project">
-          <h2>6. Stage</h2>
-          <div class="stage-container">
-            <div class="curtain left-curtain"></div>
-            <div class ="curtain right-curtain"></div>
-            <img src="images/theater_stage.jpg" alt="theater_stage">
-                <p>Presenting</p>
-          </div>
-        </section>
-      </main>
+    <section class="project">
+      <h2>6. Stage</h2>
+      <div class="stage-container">
+        <div class="curtain left-curtain"></div>
+        <div class="curtain right-curtain"></div>
+        <img src="images/theater_stage.jpg" alt="Theater stage">
+        <div class="spotlight"></div>
+        <p>Presenting</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
