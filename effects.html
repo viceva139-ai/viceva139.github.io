@@ -30,7 +30,7 @@
       .penguin-container img{
             width: 100%;
             height: 100%;
-            object-fit:cover;
+            object-fit: fill;
             filter: sepia(100%); }
 
       .football-container {
@@ -102,19 +102,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: 0; }
+            z-index: 1; }
       
       .curtain {
-            position: absolute;
-            top: 0;
-            width: 25%;
-            height: 100%;
-            background: linear-gradient(to right, #600, #a00, #600);
-            z-index:1;
-      .left-curtain {
-            left: 0; }
-      .right-curtain {
-            right: 0; }
+            display: none; }
 
       .spotlight {
             position: absolute;
