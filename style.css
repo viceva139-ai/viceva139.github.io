@@ -31,7 +31,7 @@ iframe{
   border:3px solid #000;
   margin-top: 20px;
 
-{ margin: 0;
+* { margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
