@@ -35,28 +35,69 @@ iframe{
   padding: 0;
   box-sizing: border-box; }
 
- Body { font-family: sans-serif; Background: #f4f4f9; }
+ body {
+  font-family: sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
 
-      .fade-in { animation: fadeIn 2s ease-in; text-align: center; }
-      @keyframes fadeIn { from { opacity: 0; } to {opacity: 1; } } 
+.fade-in {
+  animation: fadeIn 2s ease-in;
+  text-align: center;
+}
 
-      .card-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        padding: 20px; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-      .card {
-        border: 2px solid #333;
-        padding: 20px;
-        text-align: center;
-        background: white;
-        height: 100px;
-        transition: transform 0.3s; }          
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-      .answer {opacity: 0; transition: opacity 0.5s ease; color: #d46e37; }
-      .card:hover .answer { opacity: 1; }
-      .card:hover { transform: scale(1.05); background: #eef; } 
+.card {
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+.answer {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: #d46e37;
+  font-weight: 500;
+}
+
+.card:hover .answer,
+.card:focus-within .answer {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #eef;
+}
 
   
   
